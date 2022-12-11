@@ -9,6 +9,8 @@ import (
 	"strconv"
 	"strings"
 	"sync"
+
+	api "github.com/HondaAo/proglog/api/v1"
 )
 
 type Log struct {

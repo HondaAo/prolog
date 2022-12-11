@@ -5,6 +5,7 @@ import (
 	"os"
 	"testing"
 
+	api "github.com/HondaAo/proglog/api/v1"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/protobuf/proto"
 )
@@ -34,7 +35,7 @@ func TestSegment(t *testing.T) {
 		require.Equal(t, want.Value, got.Value)
 	}
 
-	_, err := s.Append(want)
+	_, err = s.Append(want)
 	require.Equal(t, io.EOF, err)
 
 	require.True(t, s.IsMaxed())

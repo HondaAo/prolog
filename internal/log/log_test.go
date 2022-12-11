@@ -5,6 +5,7 @@ import (
 	"os"
 	"testing"
 
+	api "github.com/HondaAo/proglog/api/v1"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/protobuf/proto"
 )
@@ -17,7 +18,7 @@ func TestLog(t *testing.T) {
 		"offset out of range error":         TestOutOfRangeErr,
 		"init with existing segments":       TestInitExisting,
 		"reader":                            testReader,
-		"truncate":                          testTrancate,
+		"truncate":                          testTrucate,
 	} {
 		t.Run(scenario, func(t *testing.T) {
 			dir, err := os.MkdirTemp("", "store-test")
