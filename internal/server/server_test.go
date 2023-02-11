@@ -102,7 +102,6 @@ func setupTest(t *testing.T, fn func(*Config)) (
 		config.NobodyClientCertFile,
 		config.NobodyClientKeyFile,
 	)
-	// END: multi_client
 
 	serverTLSConfig, err := config.SetupTLSConfig(config.TLSConfig{
 		CertFile: config.ServerCertfile,
